@@ -52,15 +52,15 @@ CREATE TABLE `accounts` (
   PRIMARY KEY (`account_id`),
   KEY `accounts_FK` (`customer_id`),
   CONSTRAINT `accounts_FK` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`customer_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=95471 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 LOCK TABLES `accounts` WRITE;
 /*!40000 ALTER TABLE `accounts` DISABLE KEYS */;
 INSERT INTO `accounts` VALUES 
-	(95470,2000,'2020-08-22 10:20:06', 'saving', 6823.23, 1),
-	(95471,2002,'2020-08-09 10:27:22', 'checking', 3342.96, 1),
-  (95472,2001,'2020-08-09 10:35:22', 'saving', 7000, 1),
-  (95473,2001,'2020-08-09 10:38:22', 'saving', 5861.86, 1);
+	(1,2000,'2020-08-22 10:20:06', 'saving', 6823.23, 1),
+	(2,2002,'2020-08-09 10:27:22', 'checking', 3342.96, 1),
+    (3,2001,'2020-08-09 10:35:22', 'saving', 7000, 1),
+    (4,2001,'2020-08-09 10:38:22', 'saving', 5861.86, 1);
 /*!40000 ALTER TABLE `accounts` ENABLE KEYS */;
 
 UNLOCK TABLES;
