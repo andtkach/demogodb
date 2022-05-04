@@ -83,8 +83,8 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `users`;
 
 CREATE TABLE `users` (
-  `username` varchar(20) NOT NULL,
-  `password` varchar(20) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(500) NOT NULL,
   `role` varchar(20) NOT NULL,
   `customer_id` int(11) DEFAULT NULL,
   `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -94,9 +94,9 @@ CREATE TABLE `users` (
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` VALUES 
-  ('admin','abc123','admin', NULL, '2020-08-09 10:27:22'),
-  ('2001','abc123','user', 2001, '2020-08-09 10:27:22'),
-  ('2000','abc123','user', 2000, '2020-08-09 10:27:22');
+  ('admin','$2a$10$2qOb2TzWh66O9lVc6G8Lwu6Qb7bEencHcc6VWAchQx9YIvM.qF/5S','admin', NULL, '2022-05-01 10:00:01'),
+  ('user1@email.com','$2a$10$puZ6EFKgbJdtl6wUMTQAhexZfynZNTgGGVtDQJL9JkJrzfzkIucAm','user', 2001, '2022-05-01 10:00:02'),
+  ('user2@email.com','$2a$10$w9lTvILh28FC8x3rCGFoUOg2..WRQnx6Z9VKDNmH27HAbHN4bWhru','user', 2000, '2022-05-01 10:00:03');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 UNLOCK TABLES;
