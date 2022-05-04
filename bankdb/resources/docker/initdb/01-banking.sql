@@ -1,7 +1,4 @@
--- MySQL dump 10.13  Distrib 5.6.27, for Linux (x86_64)
---
 -- Host: localhost    Database: bankdb
--- ------------------------------------------------------
 -- Server version	5.6.27
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -15,9 +12,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `accounts`
---
 CREATE DATABASE bankdb;
 USE bankdb;
 
@@ -59,9 +53,6 @@ CREATE TABLE `accounts` (
   KEY `accounts_FK` (`customer_id`),
   CONSTRAINT `accounts_FK` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`customer_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=95471 DEFAULT CHARSET=latin1;
---
--- Dumping data for table `accounts`
---
 
 LOCK TABLES `accounts` WRITE;
 /*!40000 ALTER TABLE `accounts` DISABLE KEYS */;
@@ -99,9 +90,6 @@ CREATE TABLE `users` (
   `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
---
--- Dumping data for table `users`
---
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
@@ -130,6 +118,4 @@ CREATE TABLE `refresh_token_store` (
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2020-08-31 10:25:19
 
